@@ -14,7 +14,7 @@ cd "$GITHUB_WORKSPACE"
 fail=0
 for i in "${jsonnetFiles[@]}"; do
     set +o errexit
-    jsonnet-lint --jpath vendor/ "$i"
+    jsonnet-lint --jpath "$GITHUB_WORKSPACE" --jpath "$GITHUB_WORKSPACE"/vendor/ "$i"
     # shellcheck disable=SC2181
     if [ $? -gt 0 ]; then
         fail=1
