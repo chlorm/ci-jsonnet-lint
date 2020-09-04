@@ -1,0 +1,8 @@
+name: "ci-jsonnet-lint"
+description: "Checks for linter errors"
+branding:
+  icon: "check"
+  color: "green"
+runs:
+  using: "docker"
+  image: "Dockerfile"
