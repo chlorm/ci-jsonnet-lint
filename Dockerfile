@@ -1,6 +1,5 @@
 FROM golang:latest AS builder
 
-RUN go get -d -v github.com/google/go-jsonnet/cmd/jsonnet-lint@latest
 RUN go install -v github.com/google/go-jsonnet/cmd/jsonnet-lint@latest
 
 FROM opensuse/leap:latest AS runner
